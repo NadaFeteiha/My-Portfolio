@@ -37,27 +37,31 @@
     <h2 class="section-title" style="margin-top: 60px;">Certifications</h2>
     <div class="cert-grid">
         {% for c in certifications %}
-        <div class="cert-card">
-            <div class="cert-header">
-                <img src="{{ c.image }}" alt="{{ c.certification }}">
-                <div class="cert-info">
-                    <h3>{{ c.certification }}</h3>
-                    <p class="cert-org">{{ c.organization }}</p>
-                    <p class="cert-year">{{ c.year }}</p>
-                </div>
-            </div>
-            <p class="cert-desc">{{ c.description }}</p>
+        <div class="certification-card">
+            <a href="{{ c.link if c.link else '#' }}" target="_blank" class="cert-card-link">
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <img src="{{ c.image }}" alt="{{ c.certification }}">
+                        <div class="cert-info">
+                            <h3>{{ c.certification }}</h3>
+                            <p class="cert-org">{{ c.organization }}</p>
+                            <p class="cert-year">{{ c.year }}</p>
+                        </div>
+                    </div>
+                    <p class="cert-desc">{{ c.description }}</p>
 
-            {% if c.relevant_skills %}
-            <div class="cert-skills">
-                <h4>Skills Gained</h4>
-                <ul>
-                    {% for s in c.relevant_skills %}
-                    <li>{{ s }}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-            {% endif %}
+                    {% if c.relevant_skills %}
+                    <div class="cert-skills">
+                        <h4>Skills Gained</h4>
+                        <div>
+                            {% for s in c.relevant_skills %}
+                            <span class="span">{{ s }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </a>
         </div>
         {% endfor %}
     </div>

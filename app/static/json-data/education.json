@@ -6,7 +6,7 @@
       "years": "2025 - 2029",
       "description": "Specialized in artificial intelligence, deep learning, machine learning, and natural language processing, with research experience in reinforcement learning.",
       "relevant_skills": ["Deep Learning", "RAG", "TensorFlow", "Reinforcement Learning", "Natural Language Processing", "Machine Learning"],
-      "image": "https://smapse.com/storage/2020/05/converted/825_585_cairo-university-smapse3.jpg"
+      "image": "https://www.cityu.edu/wp-content/uploads/2014/12/header-fpo.jpg"
     },
     {
       "degree": "Bachelor of Computer Science",
@@ -14,25 +14,46 @@
       "years": "2009 - 2013",
       "description": "Focused on foundational computer science concepts such as algorithms, data structures, software engineering, and computer systems.",
       "relevant_skills": [ "Data Structures", "Algorithms","Software Engineering", "Operating Systems"],
-      "image": "https://lmnarchitects.com/wp-content/uploads/2021/12/Division-of-Continuing-Education-Building-University-of-California-Irvine_Image-Page-2000x800.jpg"
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDxnklgl1nuKUE4z5VpmM2D0EzIMtMOyjGXw&s"
     }
   ],
   "certifications": [
     {
-      "certification": "Certified Kubernetes Administrator (CKA)",
-      "organization": "Cloud Native Computing Foundation",
-      "year": "2023",
-      "description": "Demonstrated proficiency in Kubernetes administration, including installation, configuration, and troubleshooting of Kubernetes clusters.",
-      "relevant_skills": ["Kubernetes", "Container Orchestration", "Cloud Native Technologies"],
-      "image": "https://www.cncf.io/wp-content/uploads/2020/01/CKA-Logo-Color.png"
+      "certification": "Introducing Generative AI with AWS",
+      "organization": "Udacity",
+      "year": "June 2025",
+      "description": "An introduction to the core concepts of Generative AI, including AWS-specific tools and services for building GenAI applications.",
+      "relevant_skills": ["Generative AI", "AWS Bedrock", "Prompt Engineering", "AI Models"],
+      "image": "https://external-preview.redd.it/Wk5zsoRdqs2C_zCnp4yrhluZaudtVAb43sM8RMYdafM.jpg?width=1080&crop=smart&auto=webp&s=b4401edcde3363fda831384b2620904936dc8070",
+      "link": "https://www.udacity.com/certificate/e/06590a14-3c1d-11f0-9b5b-d34bd9632b43"
     },
     {
-      "certification": "AWS Certified Solutions Architect - Associate",
-      "organization": "Amazon Web Services",
-      "year": "2023",
-      "description": "Validated skills in designing distributed systems on AWS, including best practices for security, scalability, and cost optimization.",
-      "relevant_skills": ["AWS", "Cloud Architecture", "Distributed Systems", "Security", "Scalability"],
-      "image": "https://d1.awsstatic.com/certification-badges/AWS-Certified-Solutions-Architect-Associate_300x300.png"
+      "certification": "Software Development",
+      "organization": "Per Scholas",
+      "year": "Mar 2025",
+      "description": "Completed a rigorous, industry-aligned software development training program with hands-on experience in full-stack technologies.",
+      "relevant_skills": ["JavaScript", "React", "Node.js", "Agile", "GitHub"],
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXMKEaZB1633tYRwgM1ppPMr1WQ--tSLfXfA&s",
+      "link": "https://drive.google.com/file/d/1qeGNIcXOcMQiL5nP93faY8xtwl8UfgfX/view"
+    },
+    {
+      "certification": "Foundations of Generative AI",
+      "organization": "Udacity",
+      "year": "Jan 2025",
+      "description": "Covers the foundational principles of Generative AI including language models, transformers, and diffusion models.",
+      "relevant_skills": ["Generative AI", "Transformer Models", "Prompt Tuning"],
+      "image": "https://external-preview.redd.it/Wk5zsoRdqs2C_zCnp4yrhluZaudtVAb43sM8RMYdafM.jpg?width=1080&crop=smart&auto=webp&s=b4401edcde3363fda831384b2620904936dc8070",
+      "link": "https://www.udacity.com/certificate/e/ae4ae34a-b7bc-11ef-b074-571ce03da937"
+    },
+    {
+      "certification": "Advanced Android Development",
+      "organization": "Udacity",
+      "year": "Sep 2022",
+      "description": "Explored advanced Android topics including custom views, performance optimization, and using sensors and location APIs.",
+      "relevant_skills": ["Android", "Kotlin", "Location APIs", "Custom Views", "UI/UX"],
+      "image": "https://external-preview.redd.it/Wk5zsoRdqs2C_zCnp4yrhluZaudtVAb43sM8RMYdafM.jpg?width=1080&crop=smart&auto=webp&s=b4401edcde3363fda831384b2620904936dc8070",
+      "link": "https://www.udacity.com/certificate/PGGEEDSG"
     }
+
   ]
 }
