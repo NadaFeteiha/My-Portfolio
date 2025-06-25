@@ -262,98 +262,215 @@ body {
 /*#endregion */
 
 /*#region Education*/
-
-body {
-    font-family: "Roboto", sans-serif;
-    background-color: #ffffff;
+.education-section {
+    padding: 40px 20px;
+    background-color: #f7f9fc;
 }
 
-.education-header {
+.section-title {
     text-align: center;
-    margin-bottom: 50px;
-}
-
-.education-header h2 {
     font-size: 36px;
-    color: #1d539f;
     font-weight: 700;
-}
-
-.education-cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.education-card {
-    background: #ffffff;
-    border-radius: 10px;
-    padding: 20px;
-    width: 300px;
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.25);
-    transition: transform 0.45s ease;
-}
-
-.education-card:hover {
-    transform: translateY(-10px);
-}
-
-.education-card-header {
-    text-align: center;
-}
-
-.education-image img {
-    width: 100%;
-    height: auto;
-    max-height: 200px;
-    object-fit: contain;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.education-card-header h3 {
-    font-size: 24px;
     color: #1d539f;
+    margin-bottom: 40px;
 }
 
-.education-card-header .school-name {
-    font-size: 18px;
-    color: #949494;
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.education-card-header .years {
-    font-size: 16px;
-    color: #949494;
+.edu-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
-.education-card-body p {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.6;
-    margin-top: 10px;
+.edu-card:hover {
+    transform: translateY(-8px);
 }
 
-.skills {
-    margin-top: 20px;
+.edu-img-wrapper img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
 }
 
-.skills h4 {
-    font-size: 18px;
+.edu-content {
+    padding: 20px;
+}
+
+.degree {
+    font-size: 20px;
     font-weight: 600;
     color: #1d539f;
+    margin-bottom: 5px;
 }
 
-.skills ul {
-    list-style-type: none;
+.school,
+.edu-years {
+    font-size: 16px;
+    color: #6b7280;
+}
+
+.edu-desc {
+    font-size: 15px;
+    color: #374151;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.edu-skills {
+    margin-top: 15px;
+}
+
+.edu-skills h4 {
+    font-size: 16px;
+    color: #1d539f;
+    margin-bottom: 8px;
+}
+
+.edu-skills ul {
+    list-style: none;
     padding: 0;
 }
 
-.skills ul li {
+.edu-skills li {
     font-size: 14px;
-    color: #949494;
-    padding-left: 10px;
+    color: #4b5563;
+    padding-left: 15px;
+    position: relative;
     margin-bottom: 5px;
+}
+
+.edu-skills li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #1d539f;
+}
+
+.edu-certs {
+    margin-top: 20px;
+}
+
+.edu-certs h4 {
+    font-size: 16px;
+    color: #1d539f;
+    margin-bottom: 8px;
+}
+
+.edu-certs ul {
+    list-style: none;
+    padding: 0;
+}
+
+.edu-certs li {
+    font-size: 14px;
+    color: #4b5563;
+    margin-bottom: 5px;
+}
+
+.edu-certs li a {
+    color: #1d539f;
+    text-decoration: none;
+}
+
+.edu-certs li a:hover {
+    text-decoration: underline;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cert-card {
+    background: #f0f4ff;
+    border-left: 6px solid #1d539f;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-6px);
+}
+
+.cert-header {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.cert-header img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.cert-info h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1d539f;
+    margin: 0;
+}
+
+.cert-org,
+.cert-year {
+    font-size: 14px;
+    color: #555;
+    margin: 2px 0;
+}
+
+.cert-desc {
+    font-size: 14px;
+    color: #333;
+    margin-top: 8px;
+    line-height: 1.5;
+}
+
+.cert-skills {
+    margin-top: 15px;
+}
+
+.cert-skills h4 {
+    font-size: 15px;
+    color: #1d539f;
+    margin-bottom: 6px;
+}
+
+.cert-skills ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.cert-skills li {
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 4px;
+    padding-left: 14px;
+    position: relative;
+}
+
+.cert-skills li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #1d539f;
 }
 
 /*#endregion */

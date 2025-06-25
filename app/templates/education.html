@@ -1,34 +1,66 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="education-header">
-    <h2>My Education</h2>
-</div>
+<div class="education-section">
+    <h2 class="section-title">My Education</h2>
 
-<div class="education-cards-container">
-    {% for e in education %}
-    <div class="education-card">
-        <div class="education-card-header">
-            <h3>{{ e.degree }}</h3>
-            <p class="school-name">{{ e.school }}</p>
-            <p class="years">{{ e.years }}</p>
+    <!-- Degrees -->
+    <div class="education-grid">
+        {% for d in degrees %}
+        <div class="edu-card">
+            <div class="edu-img-wrapper">
+                <img src="{{ d.image }}" alt="{{ d.school }}">
+            </div>
+            <div class="edu-content">
+                <h3 class="degree">{{ d.degree }}</h3>
+                <p class="school">{{ d.school }}</p>
+                <p class="edu-years">{{ d.years }}</p>
+                <p class="edu-desc">{{ d.description }}</p>
+
+                {% if d.relevant_skills %}
+                <div class="edu-skills">
+                    <h4>Relevant Skills</h4>
+                    <ul>
+                        {% for s in d.relevant_skills %}
+                        <li>{{ s }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+            </div>
         </div>
-        <div class="education-image">
-            <img src="{{ e.image }}">
-        </div>
-        <div class="education-card-body">
-            <p>{{ e.description }}</p>
-        </div>
-        <div class="skills">
-            <h4>Relevant Skills</h4>
-            <ul>
-                {% for s in e.relevant_skills %}
-                <li>{{ s }}</li>
-                {% endfor %}
-            </ul>
-        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-</div>
 
+    <!-- Certifications -->
+    {% if certifications %}
+    <h2 class="section-title" style="margin-top: 60px;">Certifications</h2>
+    <div class="cert-grid">
+        {% for c in certifications %}
+        <div class="cert-card">
+            <div class="cert-header">
+                <img src="{{ c.image }}" alt="{{ c.certification }}">
+                <div class="cert-info">
+                    <h3>{{ c.certification }}</h3>
+                    <p class="cert-org">{{ c.organization }}</p>
+                    <p class="cert-year">{{ c.year }}</p>
+                </div>
+            </div>
+            <p class="cert-desc">{{ c.description }}</p>
+
+            {% if c.relevant_skills %}
+            <div class="cert-skills">
+                <h4>Skills Gained</h4>
+                <ul>
+                    {% for s in c.relevant_skills %}
+                    <li>{{ s }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+</div>
 {% endblock %}

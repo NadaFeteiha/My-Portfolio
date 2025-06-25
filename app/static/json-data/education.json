@@ -1,18 +1,38 @@
-[
-  {
-    "degree": "Bachelor of Science in Computer Science",
-    "school": "University of California, Irvine",
-    "years": "2024 - 2027",
-    "description": "Focused on foundational computer science concepts such as algorithms, data structures, software engineering, and computer systems.",
-    "relevant_skills": ["C++", "Python", "Artificial Intelligence", "Data Structures", "Software Engineering", "Operating Systems"],
-    "image": "https://lmnarchitects.com/wp-content/uploads/2021/12/Division-of-Continuing-Education-Building-University-of-California-Irvine_Image-Page-2000x800.jpg"
-  },
-  {
-    "degree": "Master of Science in Artificial Intelligence",
-    "school": "Massachusetts Institute of Technology",
-    "years": "2027 - 2029",
-    "description": "Specialized in artificial intelligence, deep learning, machine learning, and natural language processing, with research experience in reinforcement learning.",
-    "relevant_skills": ["Deep Learning", "RAG", "TensorFlow", "Reinforcement Learning", "Natural Language Processing", "Machine Learning"],
-    "image": "https://www.science.org/do/10.1126/science.aav7395/abs/MIT_16x9_0.jpg"
-  }
-]
+{
+  "degrees": [
+      {
+      "degree": "Master of Artificial Intelligence",
+      "school": "CityU , Seattle, USA",
+      "years": "2025 - 2029",
+      "description": "Specialized in artificial intelligence, deep learning, machine learning, and natural language processing, with research experience in reinforcement learning.",
+      "relevant_skills": ["Deep Learning", "RAG", "TensorFlow", "Reinforcement Learning", "Natural Language Processing", "Machine Learning"],
+      "image": "https://smapse.com/storage/2020/05/converted/825_585_cairo-university-smapse3.jpg"
+    },
+    {
+      "degree": "Bachelor of Computer Science",
+      "school": "Cairo University , Egypt",
+      "years": "2009 - 2013",
+      "description": "Focused on foundational computer science concepts such as algorithms, data structures, software engineering, and computer systems.",
+      "relevant_skills": [ "Data Structures", "Algorithms","Software Engineering", "Operating Systems"],
+      "image": "https://lmnarchitects.com/wp-content/uploads/2021/12/Division-of-Continuing-Education-Building-University-of-California-Irvine_Image-Page-2000x800.jpg"
+    }
+  ],
+  "certifications": [
+    {
+      "certification": "Certified Kubernetes Administrator (CKA)",
+      "organization": "Cloud Native Computing Foundation",
+      "year": "2023",
+      "description": "Demonstrated proficiency in Kubernetes administration, including installation, configuration, and troubleshooting of Kubernetes clusters.",
+      "relevant_skills": ["Kubernetes", "Container Orchestration", "Cloud Native Technologies"],
+      "image": "https://www.cncf.io/wp-content/uploads/2020/01/CKA-Logo-Color.png"
+    },
+    {
+      "certification": "AWS Certified Solutions Architect - Associate",
+      "organization": "Amazon Web Services",
+      "year": "2023",
+      "description": "Validated skills in designing distributed systems on AWS, including best practices for security, scalability, and cost optimization.",
+      "relevant_skills": ["AWS", "Cloud Architecture", "Distributed Systems", "Security", "Scalability"],
+      "image": "https://d1.awsstatic.com/certification-badges/AWS-Certified-Solutions-Architect-Associate_300x300.png"
+    }
+  ]
+}
