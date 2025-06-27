@@ -21,7 +21,7 @@ def load_json_data(path: Path, category: str) -> list:
 def index():
     path = Path('app/static/json-data/aboutMe.json')
     about_me = load_json_data(path, 'aboutMe')
-    return render_template('index.html', name="Firstname Lastname", about_me=about_me, url=os.getenv("URL"))
+    return render_template('index.html', name="Nada Feteiha", about_me=about_me, url=os.getenv("URL"))
 
 @app.route('/work')
 def work():
@@ -35,7 +35,7 @@ def work():
 def education():
     path = Path('app/static/json-data/education.json')
     education = load_json_data(path, 'education')
-    return render_template('education.html', title="Education", education = education, url=os.getenv("URL"))
+    return render_template('education.html', title="Education", degrees=education["degrees"], certifications=education["certifications"], url=os.getenv("URL"))
 
 @app.route('/hobbies')
 def hobbies():
