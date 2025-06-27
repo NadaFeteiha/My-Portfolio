@@ -1,15 +1,12 @@
 {% extends "base.html" %}
 
-{% block scripts %}
-<script src="{{ url_for('static', filename='js/ProjectDetails.js') }}"></script>
-{% endblock %}
-
 {% block content %}
 <div class="work-experience-section">
     <h1 class="section-title">Work Experience</h1>
 
     {% for exp in experiences %}
     <div class="experience-card">
+        <div class="timeline-date">{{ exp.date }}</div>
         <div class="exp-header">
             {% if exp.logo %}
             <img src="{{ url_for('static', filename='img/' + exp.logo) }}" alt="{{ exp.company }} logo"
@@ -18,7 +15,7 @@
             <div>
                 <h2>{{ exp.role }}</h2>
                 <h3>{{ exp.company }}</h3>
-                <p class="exp-meta">{{ exp.location }} | {{ exp.date }}</p>
+                <p class="exp-meta">{{ exp.location }}</p>
             </div>
         </div>
         <ul class="exp-description">
@@ -36,7 +33,6 @@
 <div>
     <h2 class="section-title">My Projects</h2>
     <div class="projects-grid">
-
         <div class="places-container">
             {% for project in projects %}
             <div class="place-card" onclick="this.classList.toggle('flipped')">
@@ -70,9 +66,6 @@
             </div>
             {% endfor %}
         </div>
-
     </div>
 </div>
-
-
 {% endblock %}

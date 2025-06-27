@@ -1,50 +1,85 @@
 [
   {
-    "company": "Major League Hacking",
-    "role": "Production Engineering Fellow",
-    "location": "Remote - New York, NY",
-    "date": "June 2025 - Sept 2025",
-    "logo": "logo.svg",
+    "company": "Alsaad101",
+    "role": "Android Developer",
+    "location": "Riyadh, Saudi Arabia",
+    "date": "Sep 2016 - May 2018",
+    "logo": "https://pbs.twimg.com/profile_images/1402654356378472448/TEAB1mre_400x400.png",
     "description": [
-      "Learned production engineering fundamentals including infrastructure as code, monitoring, and incident response.",
-      "Gained hands-on experience with CI/CD pipelines, logging, alerting, and performance optimization.",
-      "Collaborated with mentors and teams to troubleshoot live production issues and improve system reliability."
+      "Developed and deployed 10+ Android apps using Java, improving operational efficiency.",
+      "Implemented modular architecture patterns, reducing feature development time by 25%.",
+      "Optimized app performance, resulting in 30% faster load times."
     ]
   },
   {
-    "company": "Google",
-    "role": "Software Engineering Intern",
-    "location": "Mountain View, CA",
-    "date": "May 2024 - August 2024",
+    "company": "Ministry of Planning and Economic Development",
+    "role": "Software Developer",
+    "location": "Cairo, Egypt",
+    "date": "Mar 2014 - May 2015",
     "logo": "logo.svg",
     "description": [
-      "Developed features for Google Search infrastructure improving latency and reliability.",
-      "Implemented scalable microservices in Go and optimized data pipelines using BigQuery.",
-      "Collaborated with cross-functional teams following Agile practices to ship new product enhancements."
+      "Created Vaccination Reminder app that improved compliance rates by 40%.",
+      "Reduced release cycles by 15% through CI/CD implementation.",
+      "Collaborated with cross-functional teams to deliver 3 government applications."
     ]
   },
   {
-    "company": "Meta",
-    "role": "Frontend Engineer Intern",
-    "location": "Menlo Park, CA",
-    "date": "June 2023 - August 2023",
+    "company": "Self-Employed",
+    "role": "Android Developer",
+    "location": "Cairo, Egypt",
+    "date": "Mar 2014 - May 2015",
     "logo": "logo.svg",
     "description": [
-      "Built interactive UI components for Facebook’s mobile web app using React and TypeScript.",
-      "Improved app performance by reducing bundle size and optimizing rendering.",
-      "Worked closely with design and product teams to enhance user experience and accessibility."
+      "Published 5+ Android apps on Google Play with 30% increased download rates.",
+      "Developed apps like International Champion Swimmer Academy and Buy&Sale.",
+      "Achieved high user ratings (4.5+ avg) for functionality and performance."
     ]
   },
   {
-    "company": "Amazon",
-    "role": "Cloud Operations Intern",
-    "location": "Seattle, WA",
-    "date": "June 2022 - August 2022",
+    "company": "ASGATech Ltd.",
+    "role": "Android Developer",
+    "location": "Cairo, Egypt",
+    "date": "Nov 2013 - Sep 2014",
     "logo": "logo.svg",
     "description": [
-      "Monitored and maintained AWS cloud infrastructure supporting high-traffic e-commerce systems.",
-      "Automated deployment workflows using AWS Lambda and CloudFormation.",
-      "Participated in incident management and root cause analysis to improve system uptime."
+      "Developed key features for Axiom Telecom and Quran Pro applications (20% user base growth).",
+      "Redesigned UI leading to 15% increase in positive reviews.",
+      "Implemented multilingual support and offline functionality for Quran Pro."
+    ]
+  },
+  {
+    "company": "Budgetwise",
+    "role": "Software Developer (Volunteer)",
+    "location": "Los Angeles, California",
+    "date": "Nov 2023 - Jan 2024",
+    "logo": "logo.svg",
+    "description": [
+      "Integrated mobile applications with backend services to ensure smooth functioning of the software and improved user experience by 25%.",
+      "Refactored existing code to improve performance and maintainability."
+    ]
+  },
+  {
+    "company": "The Chance",
+    "role": "Software Developer (Volunteer)",
+    "location": "Baghdad, Iraq",
+    "date": "Feb 2023 - Oct 2023",
+    "logo": "logo.svg",
+    "description": [
+      "Collaborated with teams to develop diverse mobile applications.",
+      "Contributed to server-side development using Ktor-Server Framework.",
+      "Implemented Kotlin multiplatform applications and backend for beep-beep.",
+      "Built backend server using Ktor and PostgreSQL for Honey Mart Server."
+    ]
+  },
+  {
+    "company": "Earth Hero",
+    "role": "Android Developer (Volunteer)",
+    "location": "Chicago, Illinois",
+    "date": "Mar 2023 - May 2023",
+    "logo": "logo.svg",
+    "description": [
+      "Developed new features and fixed issues in the Earth Hero application.",
+      "Improved application performance and user experience."
     ]
   }
 ]
