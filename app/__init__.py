@@ -26,10 +26,15 @@ def index():
 @app.route('/work')
 def work():
     path = Path('app/static/json-data/experiences.json')
-    pathProjects = Path('app/static/json-data/projects.json')
     experiences = load_json_data(path, 'experiences')
-    projects = load_json_data(pathProjects, 'projects')
-    return render_template('work.html', title="Experience", experiences=experiences, projects=projects, url=os.getenv("URL"))
+    return render_template('work.html', title="Experience", experiences=experiences["work"],volunteers=experiences["volunteer"], url=os.getenv("URL"))
+
+@app.route('/projects')
+def projects():
+    path = Path('app/static/json-data/projects.json')
+    projects = load_json_data(path, 'projects')
+    return render_template('projects.html', title="Projects", projects=projects, url=os.getenv("URL"))
+
 
 @app.route('/education')
 def education():

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+<div class="projects-section">
+    <h1 class="section-header">My Projects</h1>
+
+    <div class="projects-grid">
+        {% for project in projects %}
+        <div class="project-card">
+            <div class="project-image">
+                <img src="{{ project.image }}" alt="{{ project.title }} Screenshot">
+                <div class="project-overlay">
+                    <div class="project-links">
+                        {% if project.github %}
+                        <a href="{{ project.github }}" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        {% endif %}
+                        {% if project.demo %}
+                        <a href="{{ project.demo }}" target="_blank" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">{{ project.title }}</h3>
+                <p class="project-description">{{ project.description }}</p>
+                <div class="project-technologies">
+                    {% for tech in project.technologies %}
+                    <span class="tech-tag">{{ tech }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
