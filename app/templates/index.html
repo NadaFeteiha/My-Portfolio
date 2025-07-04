@@ -1,23 +1,29 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="profile">
+<section class="profile">
     <div class="profile-text">
-        <p class="intro">HI THERE!</p>
+        <p class="intro">👋 HI THERE!</p>
         <h1>I'm <span class="highlight">{{ name }}</span></h1>
         <p class="subtitle">{{ about_me.subtitle }}</p>
         <p class="description">{{ about_me.description }}</p>
 
         <div class="social-icons">
+            {% if about_me.github %}
             <a href="https://github.com/{{ about_me.github }}" target="_blank" class="icon-btn" aria-label="GitHub">
                 <i class="fab fa-github"></i>
             </a>
+            {% endif %}
+            {% if about_me.linkedin %}
             <a href="https://linkedin.com/in/{{ about_me.linkedin }}" target="_blank" class="icon-btn"
                 aria-label="LinkedIn">
                 <i class="fab fa-linkedin"></i>
             </a>
+            {% endif %}
+            {% if about_me.twitter %}
             <a href="https://twitter.com/{{ about_me.twitter }}" target="_blank" class="icon-btn" aria-label="Twitter">
                 <i class="fab fa-twitter"></i>
             </a>
+            {% endif %}
         </div>
 
         <div class="profile-buttons">
@@ -28,5 +34,23 @@
     <div class="profile-image">
         <img src="./static/img/logo.jpg" alt="Profile Picture" />
     </div>
-</div>
+</section>
+
+<section class="github-section">
+    <div class="github-widgets">
+        <!-- Full-width contribution card -->
+        <div class="contribution-card">
+            <div class="card-header">
+                <i class="fas fa-calendar-alt card-icon"></i>
+                <h3>My GitHub Activity</h3>
+                <a href="https://github.com/{{ about_me.github }}" target="_blank" class="github-link">
+                    View full profile <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+            <img src="https://ghchart.rshah.org/{{ about_me.github }}" alt="GitHub contributions chart"
+                class="contribution-chart" />
+        </div>
+    </div>
+</section>
+
 {% endblock %}
