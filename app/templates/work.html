@@ -1,71 +1,81 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="work-experience-section">
-    <h1 class="section-title">Work Experience</h1>
+<div class="experience-container">
+    <h1 class="section-header">Work Experience</h1>
 
-    {% for exp in experiences %}
-    <div class="experience-card">
-        <div class="timeline-date">{{ exp.date }}</div>
-        <div class="exp-header">
-            {% if exp.logo %}
-            <img src="{{ url_for('static', filename='img/' + exp.logo) }}" alt="{{ exp.company }} logo"
-                class="company-logo">
-            {% endif %}
-            <div>
-                <h2>{{ exp.role }}</h2>
-                <h3>{{ exp.company }}</h3>
-                <p class="exp-meta">{{ exp.location }}</p>
+    <div class="timeline">
+        {% for exp in experiences %}
+        <div class="timeline-item">
+            <div class="timeline-marker">
+                <div class="timeline-date start-date">{{ exp.startDate }}</div>
+                <div class="timeline-dot"></div>
+                <div class="timeline-date end-date">{{ exp.endDate }}</div>
             </div>
-        </div>
-        <ul class="exp-description">
-            {% for bullet in exp.description %}
-            <li>{{ bullet }}</li>
-            {% endfor %}
-        </ul>
-    </div>
-    {% endfor %}
-    <div style="clear: both;"></div>
-</div>
-
-<hr class="section-divider" />
-
-<div>
-    <h2 class="section-title">My Projects</h2>
-    <div class="projects-grid">
-        <div class="places-container">
-            {% for project in projects %}
-            <div class="place-card" onclick="this.classList.toggle('flipped')">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <div class="project-front">
-                            <img class="project-thumb" src="{{ project.image }}" alt="{{ project.title }} Screenshot" />
-                            <div class="project-info">
-                                <h3 class="project-title">{{ project.title }}</h3>
-                                <p class="project-desc">{{ project.description }}</p>
+            <div class="timeline-content">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        {% if exp.logo %}
+                        <img src="{{ url_for('static', filename='img/' + exp.logo) }}" alt="{{ exp.company }} logo"
+                            class="company-logo">
+                        {% endif %}
+                        <div class="experience-title">
+                            <h2>{{ exp.role }}</h2>
+                            <h3>{{ exp.company }}</h3>
+                            <div class="experience-meta">
+                                <span class="location">{{ exp.location }}</span>
                             </div>
                         </div>
                     </div>
-                    <div class="card-back">
-                        <h4>Project Details</h4>
-                        <p>{{ project.description }}</p>
-                        <div class="project-links">
-                            {% if project.github %}
-                            <a href="{{ project.github }}" target="_blank" class="project-link">GitHub</a>
-                            {% endif %}
-                            {% if project.demo %}
-                            <a href="{{ project.demo }}" target="_blank" class="project-link">Live Demo</a>
-                            {% endif %}
-                        </div>
-                        <div class="project-tech">
-                            <h4>Technologies Used</h4>
-                            <p>{{ project.technologies | join(', ') }}</p>
-                        </div>
-                    </div>
+                    <ul class="experience-description">
+                        {% for bullet in exp.description %}
+                        <li>{{ bullet }}</li>
+                        {% endfor %}
+                    </ul>
                 </div>
             </div>
-            {% endfor %}
         </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Volunteer  -->
+<div class="section-divider"></div>
+<div class="experience-container">
+    <h1 class="section-header">Volunteer work</h1>
+
+    <div class="timeline">
+        {% for volunteer in volunteers %}
+        <div class="timeline-item">
+            <div class="timeline-marker">
+                <div class="timeline-date start-date">{{ volunteer.startDate }}</div>
+                <div class="timeline-dot"></div>
+                <div class="timeline-date end-date">{{ volunteer.endDate }}</div>
+            </div>
+            <div class="timeline-content">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        {% if volunteer.logo %}
+                        <img src="{{ url_for('static', filename='img/' + volunteer.logo) }}" alt="{{ volunteer.company }} logo"
+                            class="company-logo">
+                        {% endif %}
+                        <div class="experience-title">
+                            <h2>{{ volunteer.role }}</h2>
+                            <h3>{{ volunteer.company }}</h3>
+                            <div class="experience-meta">
+                                <span class="location">{{ volunteer.location }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="experience-description">
+                        {% for bullet in volunteer.description %}
+                        <li>{{ bullet }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}

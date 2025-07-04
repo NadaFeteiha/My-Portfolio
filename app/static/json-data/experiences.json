@@ -1,85 +1,96 @@
-[
-  {
-    "company": "Alsaad101",
-    "role": "Android Developer",
-    "location": "Riyadh, Saudi Arabia",
-    "date": "Sep 2016 - May 2018",
-    "logo": "https://pbs.twimg.com/profile_images/1402654356378472448/TEAB1mre_400x400.png",
-    "description": [
-      "Developed and deployed 10+ Android apps using Java, improving operational efficiency.",
-      "Implemented modular architecture patterns, reducing feature development time by 25%.",
-      "Optimized app performance, resulting in 30% faster load times."
-    ]
-  },
-  {
-    "company": "Ministry of Planning and Economic Development",
-    "role": "Software Developer",
-    "location": "Cairo, Egypt",
-    "date": "Mar 2014 - May 2015",
-    "logo": "logo.svg",
-    "description": [
-      "Created Vaccination Reminder app that improved compliance rates by 40%.",
-      "Reduced release cycles by 15% through CI/CD implementation.",
-      "Collaborated with cross-functional teams to deliver 3 government applications."
-    ]
-  },
-  {
-    "company": "Self-Employed",
-    "role": "Android Developer",
-    "location": "Cairo, Egypt",
-    "date": "Mar 2014 - May 2015",
-    "logo": "logo.svg",
-    "description": [
-      "Published 5+ Android apps on Google Play with 30% increased download rates.",
-      "Developed apps like International Champion Swimmer Academy and Buy&Sale.",
-      "Achieved high user ratings (4.5+ avg) for functionality and performance."
-    ]
-  },
-  {
-    "company": "ASGATech Ltd.",
-    "role": "Android Developer",
-    "location": "Cairo, Egypt",
-    "date": "Nov 2013 - Sep 2014",
-    "logo": "logo.svg",
-    "description": [
-      "Developed key features for Axiom Telecom and Quran Pro applications (20% user base growth).",
-      "Redesigned UI leading to 15% increase in positive reviews.",
-      "Implemented multilingual support and offline functionality for Quran Pro."
-    ]
-  },
-  {
-    "company": "Budgetwise",
-    "role": "Software Developer (Volunteer)",
-    "location": "Los Angeles, California",
-    "date": "Nov 2023 - Jan 2024",
-    "logo": "logo.svg",
-    "description": [
-      "Integrated mobile applications with backend services to ensure smooth functioning of the software and improved user experience by 25%.",
-      "Refactored existing code to improve performance and maintainability."
-    ]
-  },
-  {
-    "company": "The Chance",
-    "role": "Software Developer (Volunteer)",
-    "location": "Baghdad, Iraq",
-    "date": "Feb 2023 - Oct 2023",
-    "logo": "logo.svg",
-    "description": [
-      "Collaborated with teams to develop diverse mobile applications.",
-      "Contributed to server-side development using Ktor-Server Framework.",
-      "Implemented Kotlin multiplatform applications and backend for beep-beep.",
-      "Built backend server using Ktor and PostgreSQL for Honey Mart Server."
-    ]
-  },
-  {
-    "company": "Earth Hero",
-    "role": "Android Developer (Volunteer)",
-    "location": "Chicago, Illinois",
-    "date": "Mar 2023 - May 2023",
-    "logo": "logo.svg",
-    "description": [
-      "Developed new features and fixed issues in the Earth Hero application.",
-      "Improved application performance and user experience."
-    ]
-  }
-]
+{
+    "work":[  
+    {
+      "company": "Alsaad101",
+      "role": "Android Developer",
+      "location": "Riyadh, Saudi Arabia",
+      "startDate": "Sep 2016",
+      "endDate": "May 2018",
+      "logo": "alsaad_logo.png",
+      "description": [
+        "Developed and deployed 10+ Android apps using Java, improving operational efficiency.",
+        "Implemented modular architecture patterns, reducing feature development time by 25%.",
+        "Optimized app performance, resulting in 30% faster load times."
+      ]
+    },
+    {
+      "company": "Ministry of Planning and Economic Development",
+      "role": "Software Developer",
+      "location": "Cairo, Egypt",
+      "startDate": "Mar 2014",
+      "endDate": "May 2015",
+      "logo": "logo.svg",
+      "description": [
+        "Created Vaccination Reminder app that improved compliance rates by 40%.",
+        "Reduced release cycles by 15% through CI/CD implementation.",
+        "Collaborated with cross-functional teams to deliver 3 government applications."
+      ]
+    },
+    {
+      "company": "Self-Employed",
+      "role": "Android Developer",
+      "location": "Cairo, Egypt",
+      "startDate": "Mar 2014",
+      "endDate": "May 2015",
+      "logo": "freelance_logo.jpeg",
+      "description": [
+        "Published 5+ Android apps on Google Play with 30% increased download rates.",
+        "Developed apps like International Champion Swimmer Academy and Buy&Sale.",
+        "Achieved high user ratings (4.5+ avg) for functionality and performance."
+      ]
+    },
+    {
+      "company": "ASGATech Ltd.",
+      "role": "Android Developer",
+      "location": "Cairo, Egypt",
+      "startDate": "Nov 2013",
+      "endDate": "Sep 2014",
+      "logo": "asgatech_logo.jpeg",
+      "description": [
+        "Developed key features for Axiom Telecom and Quran Pro applications (20% user base growth).",
+        "Redesigned UI leading to 15% increase in positive reviews.",
+        "Implemented multilingual support and offline functionality for Quran Pro."
+      ]
+    }
+  ],
+"volunteer": [
+    {
+      "company": "Budgetwise",
+      "role": "Software Developer (Volunteer)",
+      "location": "Remote",
+      "startDate": "Nov 2023",
+      "endDate": "Jan 2024",
+      "logo": "budget_wise_logo.jpeg",
+      "description": [
+        "Integrated mobile applications with backend services to ensure smooth functioning of the software and improved user experience by 25%.",
+        "Refactored existing code to improve performance and maintainability."
+      ]
+    },
+    {
+      "company": "The Chance",
+      "role": "Software Developer (Volunteer)",
+      "location": "Remote",
+      "startDate": "Feb 2023",
+      "endDate": "Oct 2023",
+      "logo": "thechance101_logo.jpeg",
+      "description": [
+        "Collaborated with teams to develop diverse mobile applications.",
+        "Contributed to server-side development using Ktor-Server Framework.",
+        "Implemented Kotlin multiplatform applications and backend for beep-beep.",
+        "Built backend server using Ktor and PostgreSQL for Honey Mart Server."
+      ]
+    },
+    {
+      "company": "Earth Hero",
+      "role": "Android Developer (Volunteer)",
+      "location": "Remote",
+      "startDate": "Mar 2023",
+      "endDate": "May 2023",
+      "logo": "earth_hero_logo.jpeg",
+      "description": [
+        "Developed new features and fixed issues in the Earth Hero application.",
+        "Improved application performance and user experience."
+      ]
+    }
+  ]
+}
