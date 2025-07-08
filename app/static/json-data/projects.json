@@ -1,39 +1,252 @@
 [
     {
         "id": 1,
-        "title": "Project Community",
-        "image": "data:image/jpeg;base64,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",
-        "description": "A community platform for HOA event and member management.",
-        "github"   :"www.github.com",
-        "demo"      :"",
-        "technologies": ["Full-Stack", "Backend", "Frontend"]
+        "title": "Shaunessy Community",
+        "categories": [
+            "Backend",
+            "Frontend",
+            "Full-Stack"
+        ],
+        "technologies": [
+            "Node.js",
+            "TypeScript",
+            "MongoDB",
+            "React"
+        ],
+        "image": "https://nadafeteiha.netlify.app/shaunessy.png",
+        "description": "A community platform for Shaunessy HOA featuring event management, member directory, and resource sharing.",
+        "achievements": [
+            "Developed RESTful API with Node.js and TypeScript handling 5,000+ requests daily",
+            "Implemented user authentication and role-based access control with JWT",
+            "Designed responsive frontend using React with Material-UI",
+            "Integrated MongoDB for efficient data storage and retrieval"
+        ],
+        "liveLink": "https://shaunessycommunity.netlify.app/"
     },
     {
         "id": 2,
         "title": "Beep-Beep",
-        "image": "https://pomagency.com/wp-content/uploads/2019/12/projects-1030x694.jpeg",
-        "description": "A ride-sharing app showcasing Kotlin Multiplatform.",
-        "github"   :"www.github.com",
-        "demo"      :"",
-        "technologies": ["KMP", "Android", "Frontend"]
+        "categories": [
+            "KMP",
+            "Backend",
+            "Android",
+            "Full-Stack"
+        ],
+        "technologies": [
+            "Kotlin",
+            "Jetpack Compose",
+            "MongoDB",
+            "Ktor"
+        ],
+        "image": "http://nadafeteiha.netlify.app/beep-beep.png",
+        "description": "A cross-platform ride-sharing application demonstrating Kotlin Multiplatform's potential with seamless backend integration.",
+        "achievements": [
+            "Designed and implemented shared business logic using KMP, enabling 90% code reuse across Android and iOS platforms",
+            "Developed scalable backend services with Ktor framework handling 10,000+ daily requests",
+            "Integrated MongoDB for efficient data storage and retrieval with optimized queries",
+            "Implemented real-time location tracking and ride matching algorithms",
+            "Created responsive UI with Jetpack Compose following Material Design guidelines"
+        ],
+        "githubLink": "https://github.com/TheChance101/beep-beep",
+        "liveLink": "https://youtube.com/playlist?list=PLd2TckiNfgT5z1rfkhV0h8YxcwgTaO1PU&si=fqGgII7C_5k-uXCH"
     },
     {
         "id": 3,
-        "title": "Project Community",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI07KBOP_jqy3Wfk2eA0EAI_BBgtyGbnI3L20YzXnDMkQgo2ZRf1VrgjEI4vhJ6f70-4k&usqp=CAU",
-        "description": "A community platform for HOA event and member management.",
-        "github"   :"www.github.com",
-        "demo"      :"www.demo.com",
-        "technologies": ["Full-Stack", "Backend", "Frontend"]
+        "title": "Budgetwise",
+        "categories": [
+            "Android"
+        ],
+        "technologies": [
+            "Kotlin",
+            "Jetpack Compose"
+        ],
+        "image": "https://budgetwise.co/img/login-image.58f317d6.png",
+        "description": "Personal finance management app with intuitive budgeting tools.",
+        "achievements": [
+            "Redesigned UI/UX leading to 25% improvement in user retention",
+            "Integrated with financial APIs for real-time transaction data synchronization",
+            "Implemented secure local storage using Room Database with encryption",
+            "Developed custom charting components for financial data visualization",
+            "Optimized app performance reducing load times by 40%"
+        ],
+        "githubLink": null,
+        "liveLink": "https://budgetwise.co/"
     },
     {
         "id": 4,
-        "title": "Beep-Beep",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvYmXsE4F2Mx_OCOM2snS4HaDDFxwJYasZlARpmyB1iniujwJ8JFTuZHIjQxK4ak3syT0&usqp=CAU",
-        "description": "A ride-sharing app showcasing Kotlin Multiplatform.",
-        "github"   :"www.github.com",
-        "demo"      :"www.demo.com",
-        "technologies": ["KMP", "Android", "Frontend"]
+        "title": "Earth Hero",
+        "categories": [
+            "Android"
+        ],
+        "technologies": [
+            "Kotlin",
+            "Jetpack Compose"
+        ],
+        "image": "https://play-lh.googleusercontent.com/4MQuI0ZzvDRRN2J_PDH0n9l_XfDq_u5LBjx62GwFD3lVvJyQHb2yHxUa86E6jLXksA=w5120-h2880-rw",
+        "description": "Climate change awareness app with actionable sustainability tips.",
+        "achievements": [
+            "Increased daily active users by 40% through gamification features",
+            "Reduced crash rate by 60% through comprehensive error handling",
+            "Implemented push notification system for daily sustainability tips",
+            "Designed interactive carbon footprint calculator",
+            "Optimized battery consumption by 30% through background task management"
+        ],
+        "githubLink": null,
+        "liveLink": "https://play.google.com/store/apps/details?id=com.earthheroorg.earthhero"
+    },
+    {
+        "id": 5,
+        "title": "Honey Mart Server",
+        "categories": [
+            "Backend"
+        ],
+        "technologies": [
+            "Kotlin",
+            "Ktor",
+            "PostgreSQL"
+        ],
+        "image": "https://nadafeteiha.netlify.app/Hany_mart.png",
+        "description": "Backend service for an e-commerce marketplace platform.",
+        "achievements": [
+            "Built RESTful API handling 500+ requests per minute with 99.9% uptime",
+            "Optimized PostgreSQL queries reducing average response time by 35%",
+            "Implemented JWT authentication and role-based authorization",
+            "Developed payment processing system integrating Stripe API",
+            "Created comprehensive API documentation using OpenAPI specification"
+        ],
+        "githubLink": "https://github.com/TheChance101/Honey-Mart-Server",
+        "liveLink": null
+    },
+    {
+        "id": 6,
+        "title": "QuoteWire",
+        "categories": [
+            "KMP",
+            "Android"
+        ],
+        "technologies": [
+            "Kotlin",
+            "Jetpack Compose"
+        ],
+        "description": "A Kotlin Multiplatform project showcasing a quote wire application.",
+        "image": "http://img.youtube.com/vi/u4vbUA_eAps/maxresdefault.jpg",
+        "achievements": [
+            "Implemented shared view models using KMP for consistent business logic",
+            "Developed platform-specific UI layers while maintaining shared architecture",
+            "Integrated with public quote API for real-time data fetching",
+            "Implemented offline-first strategy with local caching",
+            "Created responsive design adapting to multiple screen sizes"
+        ],
+        "githubLink": "https://github.com/NadaFeteiha/QuoteWire-multiplatform",
+        "liveLink": "https://www.youtube.com/watch?v=u4vbUA_eAps"
+    },
+    {
+        "id": 7,
+        "title": "MovieApp",
+        "categories": [
+            "Android"
+        ],
+        "technologies": [
+            "Kotlin",
+            "XML"
+        ],
+        "description": "A Kotlin Android project showcasing a movie application.",
+        "image": "http://img.youtube.com/vi/i2YURMEcDec/hqdefault.jpg",
+        "achievements": [
+            "Implemented MVVM architecture with clean separation of concerns",
+            "Integrated with TMDB API for movie data and images",
+            "Developed custom XML layouts with responsive design",
+            "Implemented pagination for smooth scrolling through movie lists",
+            "Added comprehensive unit tests achieving 85% code coverage"
+        ],
+        "githubLink": "https://github.com/Salmon-family/MovieApp",
+        "liveLink": "https://www.youtube.com/watch?v=i2YURMEcDec"
+    },
+    {
+        "id": 8,
+        "title": "Clubs",
+        "categories": [
+            "Android"
+        ],
+        "technologies": [
+            "Kotlin",
+            "Jetpack Compose"
+        ],
+        "description": "A Kotlin Android project showcasing a social media application.",
+        "image": "https://raw.githubusercontent.com/NadaFeteiha/Clubs/refs/heads/master/screens/Frame%201.png",
+        "achievements": [
+            "Built social feed with real-time updates using Firebase",
+            "Implemented user authentication with email/password and Google Sign-In",
+            "Created custom UI components with Jetpack Compose",
+            "Optimized image loading with caching and placeholders",
+            "Added dark/light theme support following system preferences"
+        ],
+        "githubLink": "https://github.com/NadaFeteiha/Clubs",
+        "liveLink": null
+    },
+    {
+        "id": 9,
+        "title": "Book Application",
+        "categories": [
+            "Android"
+        ],
+        "technologies": [
+            "Kotlin",
+            "jetpack compose"
+        ],
+        "description": "A Kotlin Android project showcasing a book application.",
+        "image": "https://nadafeteiha.netlify.app/book.png",
+        "achievements": [
+            "Developed book catalog with search and filtering functionality",
+            "Implemented clean architecture with repository pattern",
+            "Created custom book detail screens with Jetpack Compose",
+            "Integrated with Google Books API for content enrichment",
+            "Added bookmarking feature with local persistence"
+        ],
+        "githubLink": "https://github.com/NadaFeteiha/BookStore",
+        "liveLink": null
+    },
+    {
+        "id": 10,
+        "title": "Weather Desktop Application",
+        "categories": [
+            "Desktop",
+            "KMP"
+        ],
+        "technologies": [
+            "Kotlin",
+            "KMP"
+        ],
+        "description": "Weather desktop app using Jetpack compose.",
+        "image": "https://img.youtube.com/vi/gT2Sx0LAYGc/hqdefault.jpg",
+        "achievements": [
+            "Extended KMP shared code to desktop platform targets",
+            "Integrated with multiple weather APIs for comprehensive data",
+            "Implemented location-based weather forecasting",
+            "Created responsive desktop UI with Compose for Desktop",
+            "Added weather alert notifications system"
+        ],
+        "githubLink": "https://github.com/NadaFeteiha/WeatherDesktopApp",
+        "liveLink": "https://www.youtube.com/watch?v=gT2Sx0LAYGc"
+    },
+    {
+        "id": 11,
+        "title": "trivia-tide",
+        "categories": [
+            "Frontend"
+        ],
+        "technologies": [
+            "React",
+            "Tailwind CSS"
+        ],
+        "description": "Trivia game web application built with React and Tailwind CSS.",
+        "image": "https://nadafeteiha.netlify.app/trivia_game.png",
+        "achievements": [
+            "Developed responsive UI using Tailwind CSS with a mobile-first approach",
+            "Implemented state management with React Context API",
+            "Integrated trivia API for dynamic question fetching"
+        ],
+        "githubLink": "https://github.com/NadaFeteiha/trivia-tide",
+        "liveLink": "https://trivia-tide.netlify.app/"
     }
-    
 ]

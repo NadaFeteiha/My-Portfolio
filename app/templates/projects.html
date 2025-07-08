@@ -1,9 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-
-
 <div class="projects-section">
     <h1 class="section-header">My Projects</h1>
 
@@ -11,16 +8,16 @@
         {% for project in projects %}
         <div class="project-card">
             <div class="project-image">
-                <img src="{{ project.image }}" alt="{{ project.title }} Screenshot">
+                <img src="{{project.image}}" alt="{{ project.title }} Screenshot">
                 <div class="project-overlay">
                     <div class="project-links">
-                        {% if project.github %}
-                        <a href="{{ project.github }}" target="_blank" class="project-link">
+                        {% if project.githubLink %}
+                        <a href="{{ project.githubLink }}" target="_blank" class="project-link">
                             <i class="fab fa-github"></i>
                         </a>
                         {% endif %}
-                        {% if project.demo %}
-                        <a href="{{ project.demo }}" target="_blank" class="project-link">
+                        {% if project.liveLink %}
+                        <a href="{{ project.liveLink }}" target="_blank" class="project-link">
                             <i class="fas fa-external-link-alt"></i>
                         </a>
                         {% endif %}

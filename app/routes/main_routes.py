@@ -19,6 +19,7 @@ def work():
 @main_pages.route('/projects')
 def projects():
     data = load_json_data(Path('app/static/json-data/projects.json'), 'projects')
+    print(f"Projects data loaded: {data}")
     return render_template('projects.html', title="Projects", projects=data, url=os.getenv("URL"))
 
 @main_pages.route('/education')
