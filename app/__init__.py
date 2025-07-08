@@ -10,6 +10,7 @@ def create_app():
     # connect and create DB
     try:
         mydb.connect()
+        # mydb.drop_tables([TimelinePost])
         mydb.create_tables([TimelinePost])
     except Exception as e:
         print("Failed!!", e)

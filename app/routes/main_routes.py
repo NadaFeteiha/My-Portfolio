@@ -1,8 +1,12 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, redirect, url_for
 from pathlib import Path
 import os
 import folium
 from app.utils import load_json_data
+import requests
+from flask import request
+from app.utils import format_date 
+
 
 main_pages = Blueprint('main_pages', __name__)
 
@@ -51,3 +55,42 @@ def map():
 
     return render_template("map.html", places=places, title="Places I've Visited", description="The amazing places I've been to.", url=os.getenv("URL"))
 
+global posts
+
+@main_pages.route('/timeline')
+def timeline():
+    response = requests.get(f"{os.getenv('URL')}/api/timeline_post")
+    global posts
+    posts = response.json().get('timeline_posts', [])
+    # format dates
+    for post in posts:
+        post['timeline_time'] = format_date(post['created_at'])
+    return render_template('timeline.html', title="Timeline", posts=posts, url=os.getenv("URL"))
+
+
+# call the api to post a new timeline post
+@main_pages.route('/timeline' , methods=['POST'])
+def post_timeline():
+    global posts
+    name = request.form.get('name')
+    email = request.form.get('email')
+    content = request.form.get('content')
+
+    response = requests.post(
+        f"{os.getenv('URL')}/api/timeline_post", 
+        data={
+            'name': name,
+            'email': email,
+            'content': content,
+        }
+    )
+
+    if response.status_code == 200:
+        post = response.json()
+        # format dates
+        post['timeline_time'] = format_date(post['created_at'])
+        # insert to the top
+        posts.insert(0, post)  
+    else:
+        print(f"Error posting to timeline: {response.status_code} - {response.text}")
+    return redirect(url_for('main_pages.timeline'))

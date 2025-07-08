@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="social-container">
+    <div class="social-header">
+        <h1 class="section-header"> My Timeline</h1>
+    </div>
+
+    <div class="social-feed">
+        <!-- New Post Card -->
+        <div class="social-card">
+            <form id="timeline-form" method="POST" action="{{ url_for('main_pages.post_timeline') }}">
+                <div class="author-details">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="post-input">
+                    <textarea name="content" placeholder="What's on your mind?" required minlength="5"
+                        maxlength="500"></textarea>
+                </div>
+                <div class="post-actions">
+                    <button type="submit" class="post-button">Post</button>
+                </div>
+            </form>
+        </div>
+
+        {% for post in posts %}
+        <div class="social-card" data-post-id="{{ post.id }}">
+            <div class="post-header">
+                <div class="author-avatar square">
+                    {% if post.image %}
+                    <img src="{{ post.image }}" alt="{{ post.name }}'s avatar" class="avatar-image">
+                    {% else %}
+                    <span class="avatar-initial">{{ post.name[0]|upper }}</span>
+                    {% endif %}
+                </div>
+                <div class="author-info">
+                    <h3>{{ post.name }}</h3>
+                    <span class="author-email">{{ post.email}} | {{post.timeline_time}}</span>
+                </div>
+                <div class="post-options">
+                    <i class="fas fa-ellipsis-h options-toggle"></i>
+                    <div class="options-menu">
+                        <button class="edit-post" data-post-id="{{ post.id }}">
+                            <i class="fas fa-edit"></i> Edit
+                        </button>
+                        <button class="delete-post" data-post-id="{{ post.id }}">
+                            <i class="fas fa-trash"></i> Delete
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-content">
+                <p>{{ post.content }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // options menu
+        document.querySelectorAll('.options-toggle').forEach(toggle => {
+            toggle.addEventListener('click', function (e) {
+                e.stopPropagation();
+                const menu = this.nextElementSibling;
+                document.querySelectorAll('.options-menu').forEach(m => {
+                    if (m !== menu) m.classList.remove('show');
+                });
+                menu.classList.toggle('show');
+            });
+        });
+
+        // close menus
+        document.addEventListener('click', function () {
+            document.querySelectorAll('.options-menu').forEach(menu => {
+                menu.classList.remove('show');
+            });
+        });
+
+        // delete post 
+        document.querySelectorAll('.delete-post').forEach(button => {
+            button.addEventListener('click', function () {
+                const postId = this.getAttribute('data-post-id');
+                // TODO 
+            });
+        });
+
+        // edit post 
+        document.querySelectorAll('.edit-post').forEach(button => {
+            button.addEventListener('click', function () {
+                const postId = this.getAttribute('data-post-id');
+                // TODO
+                console.log('Edit post', postId);
+            });
+        });
+    });
+</script>
+{% endblock %}

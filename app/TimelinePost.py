@@ -6,6 +6,7 @@ class TimelinePost(Model):
     name = CharField()
     email = CharField()
     content = TextField()
+    image = CharField(null=True)  
     created_at = DateTimeField(default=datetime.now)
 
     class Meta:
