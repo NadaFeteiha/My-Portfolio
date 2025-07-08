@@ -1,25 +1,25 @@
 [
-        {
-            "location": [40.7128, -74.0060], 
-            "title": "New York", 
-            "description": "visited this place in 2021 and it was amazing to see the skyline and the diverse culture.",
-            "notables": ["Statue of Liberty", "Central Park", "Times Square"],
-            "images": [ "https://hips.hearstapps.com/hmg-prod/images/hbz-venice-gettyimages-489741024-1505338894.jpg?crop=1xw:1xh;center,top&resize=980:*","https://media.cntraveler.com/photos/5fc6818f3cfe1de2cab79372/4:3/w_4000,h_3000,c_limit/Amsterdam-GettyImages-840603854.jpg"]},
-        {
-            "location": [34.0522, -118.2437], 
-            "title": "Los Angeles", 
-            "description": "visited this place in 2020 and it was amazing to see the beaches and the vibrant culture.",
-            "notables": ["Hollywood Sign", "Griffith Observatory", "Santa Monica Pier"],
-            "images": ["https://media.cntraveler.com/photos/5fc6818f3cfe1de2cab79372/4:3/w_4000,h_3000,c_limit/Amsterdam-GettyImages-840603854.jpg"]},
-        {
-            "location": [51.5074, -0.1278], 
-            "title": "London", 
-            "description": "visited this place in 2019 and it was amazing to see the historical sites and modern attractions.",
-            "notables": ["Big Ben", "Tower Bridge", "British Museum"],
-            "images": [           
-                "https://media.cntraveler.com/photos/5fc6818f3cfe1de2cab79372/4:3/w_4000,h_3000,c_limit/Amsterdam-GettyImages-840603854.jpg",
-                "https://hips.hearstapps.com/hmg-prod/images/hbz-venice-gettyimages-489741024-1505338894.jpg?crop=1xw:1xh;center,top&resize=980:*",
-                "https://media.cntraveler.com/photos/5fc6818f3cfe1de2cab79372/4:3/w_4000,h_3000,c_limit/Amsterdam-GettyImages-840603854.jpg"
-            ]
-        }
-    ]
+    {
+        "location": [40.7128, -74.0060], 
+        "title": "New York", 
+        "description": "visited this place in 2021 and it was amazing to see the skyline and the diverse culture.",
+        "notables": ["Statue of Liberty", "Central Park", "Times Square"],
+        "images": [ "https://hips.hearstapps.com/hmg-prod/images/hbz-venice-gettyimages-489741024-1505338894.jpg?crop=1xw:1xh;center,top&resize=980:*","https://media.cntraveler.com/photos/5fc6818f3cfe1de2cab79372/4:3/w_4000,h_3000,c_limit/Amsterdam-GettyImages-840603854.jpg"]},
+    {
+        "location": [34.0522, -118.2437], 
+        "title": "Los Angeles", 
+        "description": "visited this place in 2020 and it was amazing to see the beaches and the vibrant culture.",
+        "notables": ["Hollywood Sign", "Griffith Observatory", "Santa Monica Pier"],
+        "images": ["https://media.cntraveler.com/photos/5fc6818f3cfe1de2cab79372/4:3/w_4000,h_3000,c_limit/Amsterdam-GettyImages-840603854.jpg"]},
+    {
+        "location": [51.5074, -0.1278], 
+        "title": "London", 
+        "description": "visited this place in 2019 and it was amazing to see the historical sites and modern attractions.",
+        "notables": ["Big Ben", "Tower Bridge", "British Museum"],
+        "images": [           
+            "https://media.cntraveler.com/photos/5fc6818f3cfe1de2cab79372/4:3/w_4000,h_3000,c_limit/Amsterdam-GettyImages-840603854.jpg",
+            "https://hips.hearstapps.com/hmg-prod/images/hbz-venice-gettyimages-489741024-1505338894.jpg?crop=1xw:1xh;center,top&resize=980:*",
+            "https://media.cntraveler.com/photos/5fc6818f3cfe1de2cab79372/4:3/w_4000,h_3000,c_limit/Amsterdam-GettyImages-840603854.jpg"
+        ]
+    }
+]

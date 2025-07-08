@@ -16,6 +16,7 @@
         rel="stylesheet">
 
     <link lang='sass' rel="stylesheet" href="./static/styles/main.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/card.css') }}">
     <link rel='icon' href='./static/img/favicon.ico' type='image/x-icon' />
     <title>{{ title }}</title>
 </head>
@@ -36,11 +37,11 @@
             </div>
 
             <nav class="nav-links" id="navLinks">
-                <a href="{{ url_for('work') }}">Work</a>
-                <a href="{{ url_for('projects') }}">Projects</a>
-                <a href="{{ url_for('education') }}">Education</a>
-                <a href="{{ url_for('hobbies') }}">Hobbies</a>
-                <a href="{{ url_for('map') }}">Map</a>
+                <a href="{{ url_for('main_pages.work') }}">Work</a>
+                <a href="{{ url_for('main_pages.projects') }}">Projects</a>
+                <a href="{{ url_for('main_pages.education') }}">Education</a>
+                <a href="{{ url_for('main_pages.hobbies') }}">Hobbies</a>
+                <a href="{{ url_for('main_pages.map') }}">Map</a>
             </nav>
         </div>
     </header>
