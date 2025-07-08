@@ -4,9 +4,67 @@ from dotenv import load_dotenv
 from pathlib import Path
 import json
 import folium
+from peewee import *
+from datetime import datetime
+from playhouse.shortcuts import model_to_dict 
 
 load_dotenv()
+
+# Database configuration
+# Step 1: Initialize MySQLDatabase with credentials
+mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
+                    user=os.getenv("MYSQL_USER"),
+                    password=os.getenv("MYSQL_PASSWORD"),
+                    host=os.getenv("MYSQL_HOST"),
+                    port=3306
+                    )
+print(mydb)
+
+
+# # Step 2: Define the model
+class TimelinePost(Model):
+    name = CharField()
+    email = CharField()
+    content = TextField()
+    created_at = DateTimeField(default=datetime.now)
+
+    class Meta:
+        database = mydb
+
+# #  Step 3: Connect and create table
+try:
+    mydb.connect()
+    mydb.create_tables([TimelinePost])
+except Exception as e:
+    print("⚠️ Failed to connect or create tables:", e)
+
+# # Step 4: Initialize Flask app
 app = Flask(__name__)
+
+# # Step 5: Define routes for the API
+@app.route('/api/timeline_post', methods=['POST'])
+def post_time_line_post():
+    name = request.form['name']
+    email = request.form['email']
+    content = request.form['content']
+    
+    if not name or not email or not content:
+        return {"error": "Missing required fields"}, 400
+    
+    timeline_post = TimelinePost.create(name=name, email=email, content=content)
+    return model_to_dict(timeline_post)
+
+
+@app.route('/api/timeline_post', methods=['GET'])
+def get_time_line_post():
+    print("Fetching timeline posts")
+    return {
+        'timeline_posts': [
+            model_to_dict(p)
+            for p in TimelinePost.select().order_by(TimelinePost.created_at.desc())
+        ]
+    }
+
 
 def load_json_data(path: Path, category: str) -> list:
     try:

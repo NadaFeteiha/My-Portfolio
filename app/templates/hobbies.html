@@ -1,23 +1,24 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="hobbies-header">
-    <h2>{{title}}</h2>
-    <p>{{description}}</p>
+<div class="hobbies-intro">
+    <h1>{{title}}</h1>
+    <p class="intro-text">{{description}}</p>
 </div>
 
-<div class="hobbies-container">
+<div class="hobbies-grid">
     {% for hobby in hobbies %}
-    <div class="hobby-card">
-        <div>
-            <img src="{{ hobby.image }}" alt="{{ hobby.title }} hobby">
+    <div class="hobby-tile" id="hobby-{{ loop.index }}">
+        <div class="hobby-visual">
+            <img src="{{ hobby.image }}" alt="{{ hobby.title }}" loading="lazy">
+            <div class="hobby-overlay"></div>
         </div>
-        <div class="hobby-details">
-            <h2>{{ hobby.title }}</h2>
+        <div class="hobby-content">
+            <h3>{{ hobby.title }}</h3>
             <p>{{ hobby.description }}</p>
-            <div>
+            <div class="hobby-tags">
                 {% for type in hobby.type %}
-                <span>{{ type }}</span>
+                <span class="tag">{{ type }}</span>
                 {% endfor %}
             </div>
         </div>
