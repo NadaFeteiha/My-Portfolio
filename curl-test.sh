@@ -9,6 +9,6 @@ echo "Response:"
 curl -X GET $API_URL
 
 echo "================================================"
-echo -e "Testing POST request"
+echo "Testing POST request"
 echo "Response:"
 curl -X POST $API_URL -d 'name=nada&email=nada.feteiha@gmail.com&content=Testing endpoint.'
