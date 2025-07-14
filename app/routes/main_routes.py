@@ -55,12 +55,10 @@ def map():
 
     return render_template("map.html", places=places, title="Places I've Visited", description="The amazing places I've been to.", url=os.getenv("URL"))
 
-global posts
 
 @main_pages.route('/timeline')
 def timeline():
     response = requests.get(f"{os.getenv('URL')}/api/timeline_post")
-    global posts
     posts = response.json().get('timeline_posts', [])
     # format dates
     for post in posts:
@@ -71,7 +69,6 @@ def timeline():
 # call the api to post a new timeline post
 @main_pages.route('/timeline' , methods=['POST'])
 def post_timeline():
-    global posts
     name = request.form.get('name')
     email = request.form.get('email')
     content = request.form.get('content')
@@ -87,10 +84,6 @@ def post_timeline():
 
     if response.status_code == 200:
         post = response.json()
-        # format dates
-        post['timeline_time'] = format_date(post['created_at'])
-        # insert to the top
-        posts.insert(0, post)  
     else:
         print(f"Error posting to timeline: {response.status_code} - {response.text}")
     return redirect(url_for('main_pages.timeline'))
