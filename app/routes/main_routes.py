@@ -6,6 +6,7 @@ from app.utils import load_json_data
 import requests
 from flask import request
 from app.utils import format_date 
+from app.TimelinePost import TimelinePost
 
 
 main_pages = Blueprint('main_pages', __name__)
@@ -55,16 +56,34 @@ def map():
 
     return render_template("map.html", places=places, title="Places I've Visited", description="The amazing places I've been to.", url=os.getenv("URL"))
 
-
+#Updated Timeline code from Smriti to pass tests
 @main_pages.route('/timeline')
 def timeline():
-    response = requests.get(f"{os.getenv('URL')}/api/timeline_post")
-    posts = response.json().get('timeline_posts', [])
-    # format dates
-    for post in posts:
-        post['timeline_time'] = format_date(post['created_at'])
-    return render_template('timeline.html', title="Timeline", posts=posts, url=os.getenv("URL"))
+    if os.getenv('TESTING') == 'true':
+        # Use the local database in test mode
+        posts_query = TimelinePost.select().order_by(TimelinePost.created_at.desc())
+        posts = []
+        for post in posts_query:
+            posts.append({
+                "name": post.name,
+                "email": post.email,
+                "content": post.content,
+                "created_at": post.created_at.strftime("%Y-%m-%d %H:%M:%S"),
+                "timeline_time": format_date(post.created_at.strftime('%a, %d %b %Y %H:%M:%S GMT'))
 
+            })
+    else:
+        # Use the API in production
+        url = os.getenv('URL')
+        if not url:
+            return "URL environment variable not set", 500
+
+        response = requests.get(f"{url}/api/timeline_post")
+        posts = response.json().get('timeline_posts', [])
+        for post in posts:
+            post['timeline_time'] = format_date(post['created_at'])
+
+    return render_template('timeline.html', title="Timeline", posts=posts, url=os.getenv("URL"))
 
 # call the api to post a new timeline post
 @main_pages.route('/timeline' , methods=['POST'])
