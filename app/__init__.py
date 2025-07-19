@@ -8,10 +8,11 @@ def create_app():
     app = Flask(__name__)
 
     # connect and create DB
+    #Smriti Edit: only connecting if the conneciton is closed 
     try:
-        mydb.connect()
-        # mydb.drop_tables([TimelinePost])
-        mydb.create_tables([TimelinePost])
+        if mydb.is_closed():
+            mydb.connect()
+            mydb.create_tables([TimelinePost])
     except Exception as e:
         print("Failed!!", e)
 
