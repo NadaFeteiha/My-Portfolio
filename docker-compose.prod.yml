@@ -1,0 +1,43 @@
+version: "3.8"
+
+services:
+  myportfolio:
+    container_name: myportfolio
+    build: .
+    restart: always
+    env_file: 
+      - .env
+    environment:
+      - FLASK_ENV=development
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/myportfolio
+      - ./static:/myportfolio/static  
+      - ./templates:/myportfolio/templates 
+    depends_on:
+      - mysql
+
+  mysql:
+    container_name: mysql
+    image: mariadb:10.6
+    restart: always
+    env_file: 
+      - .env
+    environment:
+      - MARIADB_ROOT_PASSWORD=mypassword
+      - MYSQL_USER=myportfolio
+      - MYSQL_PASSWORD=mypassword
+      - MYSQL_DATABASE=myportfoliodb
+    volumes:
+      - mydatabase:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "--host=localhost"]
+      interval: 30s
+      retries: 5
+      start_period: 10s
+      timeout: 10s
+
+volumes:
+  mydatabase:
+

@@ -8,7 +8,6 @@ def create_app():
     app = Flask(__name__)
 
     # connect and create DB
-    #Smriti Edit: only connecting if the conneciton is closed 
     try:
         if mydb.is_closed():
             mydb.connect()
