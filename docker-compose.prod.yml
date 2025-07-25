@@ -7,8 +7,8 @@ services:
     restart: always
     env_file: 
       - .env
-    environment:
-      - FLASK_ENV=development
+    # environment:
+      # - FLASK_ENV=development
     ports:
       - "5000:5000"
     volumes:
@@ -38,6 +38,21 @@ services:
       start_period: 10s
       timeout: 10s
 
+  nginx:
+    container_name: nginx
+    image: jonasal/nginx-certbot
+    restart: always
+    environment:
+      - CERTBOT_EMAIL:nada.feteiha@gmail.com
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - nginx_secrets:/etc/letsencrypt
+      - ./user_conf.d:/etc/nginx/user_conf.d
+    depends_on:
+      - myportfolio
 volumes:
   mydatabase:
+  nginx_secrets:
 
