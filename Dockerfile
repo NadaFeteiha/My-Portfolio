@@ -8,14 +8,13 @@ WORKDIR /myportfolio
 COPY requirements.txt .
 
 # Line 4: Install dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
 
 # Line 5: Copy the rest of the project files
 COPY . .
+COPY ./app/ ./app/
+
+CMD ["flask", "run", "--host=0.0.0.0"]
 
 # Line 6: Expose port 5000
 EXPOSE 5000
-
-# Line 7: Run Flask app
-CMD ["python", "run.py"]
-
