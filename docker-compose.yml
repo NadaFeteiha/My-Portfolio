@@ -7,8 +7,6 @@ services:
     restart: always
     env_file: 
       - .env
-    environment:
-      - FLASK_ENV=development
     volumes:
       - .:/myportfolio
     depends_on:
