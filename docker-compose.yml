@@ -33,7 +33,7 @@ services:
       - CERTBOT_EMAIL=nada.feteiha@gmail.com
     ports:
       - "80:80"
-      - "444:444"
+      - "443:443"
     volumes:
       - nginx_secrets:/etc/letsencrypt
       - ./user_conf.d:/etc/nginx/user_conf.d
