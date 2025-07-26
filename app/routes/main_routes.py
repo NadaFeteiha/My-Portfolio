@@ -79,9 +79,17 @@ def timeline():
             return "URL environment variable not set", 500
 
         response = requests.get(f"{url}/api/timeline_post")
-        posts = response.json().get('timeline_posts', [])
-        for post in posts:
-            post['timeline_time'] = format_date(post['created_at'])
+        response2 = response.json()
+        try:
+            posts = response2['timeline_posts']
+            for post in posts:
+                post['timeline_time'] = format_date(post['created_at'])
+        except requests.exceptions.HTTPError as e:
+            print("HTTP error:", e)
+            print("Response text:", response.text)
+        except requests.exceptions.JSONDecodeError:
+            print("Invalid JSON response!")
+            print("Raw response:", response.text)
 
     return render_template('timeline.html', title="Timeline", posts=posts, url=os.getenv("URL"))
 
