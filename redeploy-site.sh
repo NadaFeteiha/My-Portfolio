@@ -20,11 +20,11 @@ fi
 cd $PORTFOLIO_DIR
 
 echo "Bringing down any running Docker containers..."
-docker compose -f docker-compose.prod.yml down
+docker compose -f docker-compose.yml down
 
 echo "********************************************"
 echo "Rebuilding and bringing up Docker containers..."
-docker compose -f docker-compose.prod.yml up -d --build
+docker compose -f docker-compose.yml up -d --build
 
 echo "********************************************"
 echo "Deployment complete! portfolio is now running."
