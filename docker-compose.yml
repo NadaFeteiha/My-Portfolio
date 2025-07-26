@@ -2,7 +2,7 @@ version: "3"
 
 services:
   myportfolio:
-    container_name: myportfolio_compose
+    container_name: myportfolio
     build: .
     restart: always
     env_file: 
