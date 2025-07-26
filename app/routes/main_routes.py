@@ -80,6 +80,7 @@ def timeline():
 
         response = requests.get(f"{url}/api/timeline_post")
         print(f"Response status code: {response}")
+        posts = []
         try:
             response2 = response.json()
             posts = response2['timeline_posts']
