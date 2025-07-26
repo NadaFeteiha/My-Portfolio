@@ -79,8 +79,9 @@ def timeline():
             return "URL environment variable not set", 500
 
         response = requests.get(f"{url}/api/timeline_post")
-        response2 = response.json()
+        print(f"Response status code: {response}")
         try:
+            response2 = response.json()
             posts = response2['timeline_posts']
             for post in posts:
                 post['timeline_time'] = format_date(post['created_at'])
