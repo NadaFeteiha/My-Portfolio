@@ -14,7 +14,9 @@ main_pages = Blueprint('main_pages', __name__)
 @main_pages.route('/')
 def index():
     about_me = load_json_data(Path('app/static/json-data/aboutMe.json'), 'aboutMe')
-    return render_template('index.html', name="Nada Feteiha", about_me=about_me, url=os.getenv("URL"))
+    projects = load_json_data(Path('app/static/json-data/projects.json'), 'projects')
+
+    return render_template('index.html', name="Nada Feteiha", about_me=about_me, projects=projects, url=os.getenv("URL"))
 
 @main_pages.route('/work')
 def work():
@@ -24,7 +26,6 @@ def work():
 @main_pages.route('/projects')
 def projects():
     data = load_json_data(Path('app/static/json-data/projects.json'), 'projects')
-    print(f"Projects data loaded: {data}")
     return render_template('projects.html', title="Projects", projects=data, url=os.getenv("URL"))
 
 @main_pages.route('/education')
