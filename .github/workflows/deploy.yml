@@ -24,8 +24,9 @@ jobs:
             IdentityFile ~/.ssh/deploy-key.pem
             StrictHostKeyChecking no
           END
-        
-        - name: Deploy site
-          run: ssh my-vps '~/redeploy-site.sh'  
 
-          
+      - name: Deploy site
+        run: ssh my-vps '~/redeploy-site.sh'
+
+      - name: print deployment completion
+        run: echo "Deployment complete!"
